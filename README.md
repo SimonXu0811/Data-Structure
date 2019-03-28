@@ -7,3 +7,13 @@ Common Data Structure in Java
   <li>Tree</li>
   <li> Graph</li>
 </ul>
+
+# Array
+   ## ArrayList
+   ## LinkedList
+    <p> Stack<br>
+        Quene<br>
+        DeQuene<br>
+        Priority Quene<br>
+    </p>
+     
