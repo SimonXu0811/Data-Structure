@@ -23,7 +23,7 @@
        return linkedlist.isEmpty();
      }
      
-     public void offer(Object){
+     public void offer(Object){//如果满了返回null，否则加到队尾
        if(linkedlist.size()>=capacity){
          return null;
        }else{
@@ -31,7 +31,7 @@
        }
      }
      
-     public Object poll(){
+     public Object poll(){//数组为空就返回null，否则删除队首
        if(linkedlist.isEmpty()){
          return null;
        }else{
@@ -39,7 +39,7 @@
        }
      }
      
-     public Object peek(){
+     public Object peek(){//数组为空返回null，否则取队首的数
        if(linkedlist.isEmpty()){
          return null;
        }else{
