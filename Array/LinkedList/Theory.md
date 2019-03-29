@@ -3,7 +3,7 @@
 # LinkedList的基本特性
 1. LinkedList是查询慢增删块
 2. LinkedList是一个双向链表
-# LinkedLisy的数据结构
+# LinkedList的数据结构
  <code> 
  <pre>
        //做为双向链表，肯定一个元素包含了三个东西， 一个是对象本身，一个是指向后面的引用，一个是指向前面的引用
