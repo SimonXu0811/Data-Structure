@@ -25,3 +25,26 @@ hash需要存放的值足够大的时候，这时候就需要扩容，公式是s
 
 # HashMap与ArrayMap的区别
 ArrayMap是用了两个数组模拟HashMap，一个数组用来存放hash值，第二个数组把key和value连续的放在数组中。然后通过计算hash值得到对应的索引，再根据这个索引去查找第二个数组中的Key和Value。
+
+# HashMap的声明方式
+ HashMap<Key, Value> hashmap = new HashMap<>():
+ 
+# HashMap的常用操作
+ HashMap<Key, Value> hashmap = new HashMap<>();
+ 1. hashmap.put(Key, Value);根据key找索引，把value插入，如果value已经存在，则覆盖
+ 2. hashmap.containsKey(Key);判断是否存在key？true：false
+ 3. hashmap.containsValue(Value);判断是否存在Value？true：false
+ 4. hashmap.get(Key);通过key来取值
+ 5. hashmap.isEmpty();判断是否为空？true：false
+ 6. hashmap.size();返回hashmap的大小
+ 7. hashmap.remove(Key);通过key来删除值
+ 
+# HashMap的时空复杂度
+一般情况下，hashmap的插入和查找时间复杂度都为O(1)
+ 
+ 
+ 
+ 
+ 
+ 
+
