@@ -122,6 +122,7 @@ BinaryTree与线性表类似，有两种构成方式，一种是以数组的形�
   1. 广度优先（BFS）：依次遍历每一层
   2. 深度优先（DFS）：依次遍历最深的节点。 深度优先又有三种方式，分别是先序，中序和后序。<br>
   先序遍历就是先访问跟节点：<br>
+  <br>
   <pre>
   <code>
   public List<Node> preIterator(Node root){
