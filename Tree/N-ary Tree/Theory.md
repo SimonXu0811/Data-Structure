@@ -63,8 +63,8 @@ N-ary Tree的数据结构和二叉树类似，只是它的子节点变成了一�
 # N-ary Tree的前序遍历
 <pre>
 <code>
+  List<T> list = new ArrayList<>();
  public List<T> preOrder(Node root){
-   List<T> list = new ArrayList<>();
    if(root == null){
      return list;
    }
@@ -80,8 +80,8 @@ N-ary Tree的数据结构和二叉树类似，只是它的子节点变成了一�
 # N-ary Tree的后序遍历
 <pre>
 <code>
+   List<T> list = new ArrayList<>();
   public List<T> postOrder(Node root){
-  List<T> list = new ArrayList<>();
   if(root == null){
     return list;
   }
