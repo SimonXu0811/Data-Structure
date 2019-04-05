@@ -1,1 +1,63 @@
+# Graph的概念
+Graph是由顶点的有穷非空集合和顶点之间边的集合组成，由G（V，E）表示，其中G表示一个图，V是该图中顶点的集合，E是图G中边的集合。基本概念包括：顶点，边，有向，无向，权，路径回路，连通域，邻接点，度，入边，出边，入度，出度。
 
+# Graph的储存结构
+Graph有两种储存结构
+1. 邻接矩阵
+2. 邻接表
+
+# 邻接矩阵的特征
+ 1. 邻接矩阵是正矩阵，即横纵维数相等。 
+ 2. 矩阵的每一行或一列代表一个顶点，行与列的交点对应这两个顶点的边。 
+ 3. 矩阵的点代表边的属性，1代表有边，0代表无边，对角线上对应的横纵轴代表相同的顶点，边没有意义均为0。
+ 4. 如果是无向图，那么矩阵是对称矩阵；如果是有向图则不一定。
+ 5. 如果是有权图，矩阵点数值可以是权值。
+
+# 邻接表的特征
+1. 邻接表示一个有单链表组成的数组 。
+2. 图中的每一个顶点都有一个链，数组的大小等于图中顶点的个数。
+3. 无向图的链的第一个元素是本顶点，后继分别连接着和这个顶点相连的顶点；有向图的链第一个顶点是本顶点，后继是以本顶点为起点的边的终点。  
+4. 如果是有权图，可以在节点元素中设置权值属性 。
+
+# Graph的遍历
+遍历分为两种，一种是深度优先，一种是光度优先<br>
+1. 深度优先(DFS)<br>
+从图中的某个顶点V出发，访问此节点，然后依次从V的各个未被访问的邻接点出发深度优先搜索遍历图，直至图中所有和V路径想通的顶点都被访问到。<br>
+
+2. 广度优先(BFS)<br>
+从图中的某个顶点V出发，并在访问此顶点之后依次访问V的所有未被访问过的邻接点，之后按这些顶点被访问的先后次序依次访问它们的邻接点，直至图中所有和V有路径相通的顶点都被访问到。若此时图中尚有顶点未被访问,则另选图中一个未曾被访问的顶点作起始点，重复上述过程，直至图中所有顶点都被访问到为止。<br>
+<pre>
+<code>
+
+public void broadFirstSearch(){
+		isVisited=new boolean[vertexSize];
+		for(int i=0;i<vertexSize;i++){
+			if(!isVisited[i]){
+				broadFirstSearch(i);
+			}
+		}
+		isVisited=new boolean[vertexSize];
+	}
+  
+private void broadFirstSearch(int i){
+		int u,w;
+		LinkedList<Integer> queue=new LinkedList<Integer>();
+		System.out.println("访问到了"+i+"顶点");
+		isVisited[i]=true;
+		queue.add(i);
+		while(!queue.isEmpty()){
+			u=(Integer)(queue.removeFirst()).intValue();
+			w=getFirstNeigbour(u);
+			while(w!=-1){
+				if(!isVisited[w]){
+					System.out.println("访问到了"+w+"顶点");
+					isVisited[w]=true;
+					queue.add(w);
+				}
+				w=getNextNeighbour(u, w);
+			}
+		}
+	}
+
+</code>
+</pre>
