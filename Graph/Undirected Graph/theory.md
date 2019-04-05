@@ -24,40 +24,5 @@ Graph有两种储存结构
 1. 深度优先(DFS)<br>
 从图中的某个顶点V出发，访问此节点，然后依次从V的各个未被访问的邻接点出发深度优先搜索遍历图，直至图中所有和V路径想通的顶点都被访问到。<br>
 
-2. 广度优先(BFS)<br>
+2. 广度优先(BFS) <br>
 从图中的某个顶点V出发，并在访问此顶点之后依次访问V的所有未被访问过的邻接点，之后按这些顶点被访问的先后次序依次访问它们的邻接点，直至图中所有和V有路径相通的顶点都被访问到。若此时图中尚有顶点未被访问,则另选图中一个未曾被访问的顶点作起始点，重复上述过程，直至图中所有顶点都被访问到为止。<br>
-<pre>
-<code>
-
-public void broadFirstSearch(){
-		isVisited=new boolean[vertexSize];
-		for(int i=0;i<vertexSize;i++){
-			if(!isVisited[i]){
-				broadFirstSearch(i);
-			}
-		}
-		isVisited=new boolean[vertexSize];
-	}
-  
-private void broadFirstSearch(int i){
-		int u,w;
-		LinkedList<Integer> queue=new LinkedList<Integer>();
-		System.out.println("访问到了"+i+"顶点");
-		isVisited[i]=true;
-		queue.add(i);
-		while(!queue.isEmpty()){
-			u=(Integer)(queue.removeFirst()).intValue();
-			w=getFirstNeigbour(u);
-			while(w!=-1){
-				if(!isVisited[w]){
-					System.out.println("访问到了"+w+"顶点");
-					isVisited[w]=true;
-					queue.add(w);
-				}
-				w=getNextNeighbour(u, w);
-			}
-		}
-	}
-
-</code>
-</pre>
