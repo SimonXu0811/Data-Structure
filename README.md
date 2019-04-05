@@ -8,7 +8,7 @@ Common Data Structure in Java
   <li> Graph</li>
 </ul>
 
-# Array
+# [Array](./Data-Structure/Array)
 | ArrayList | LinkedList |
 | --- | ----- |
 | |Stack|
@@ -16,18 +16,18 @@ Common Data Structure in Java
 ||DeQuene|
 ||Prioirty Quene|
 
-# Map and Set
+# [Map and Set](./Data-Structure/Map-and-Set)
 | HashMap | HashSet |TreeSet|
 | --- | ----- |:--|
 |<key,value> must be a pair|only key and no value|
 
-# Tree
+# [Tree](./Data-Structure/Tree)
 | BinaryTree | N-ary Tree |
 | --- | ----- |
 |Binary Search Tree(BST)||
 |RBT||
 
-# Graph
+# [Graph](./Data-Structure/Graph)
 | Undirected Graph | Directed Graph |
 | --- | ----- |
 | |directed acyclic graph|
