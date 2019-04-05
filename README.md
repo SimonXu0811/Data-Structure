@@ -9,27 +9,27 @@ Common Data Structure in Java
 </ul>
 
 # Array
-   ## ArrayList
-   ## LinkedList
-        Stack
-        Quene
-        DeQuene
-        Priority Quene
-    
-     
+| ArrayList | LinkedList |
+| --- | ----- |
+| |Stack|
+| |Quene|
+||DeQuene|
+||Prioirty Quene|
+
 # Map and Set
-  ## HashMap
-     <key,value> must be a pair
-  ## HashSet
-     only key and no value
+| HashMap | HashSet |TreeSet|
+| --- | ----- |:--|
+|<key,value> must be a pair|only key and no value|
 
 # Tree
-  ## BinaryTree
-     Binary Search Tree(BST)
-  ## 3-ary Tree to multi-ary Tree
-  
+| BinaryTree | N-ary Tree |
+| --- | ----- |
+|Binary Search Tree(BST)||
+|RBT||
+
 # Graph
-  ## Directed Graph
-     directed acyclical graph
-     directed cyclical graph
-  ## Undirected Graph
+| Undirected Graph | Directed Graph |
+| --- | ----- |
+| |directed acyclic graph|
+| |directed cyclic graph|
+
